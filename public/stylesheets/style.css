@@ -1,9 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #DA22FF; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #DA22FF , #9733EE); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #DA22FF , #9733EE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #EB3349; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #EB3349 , #F45C43); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #EB3349 , #F45C43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -12,9 +12,27 @@ a {
 }
 
 #logo-container{
-  color:purple;
+  color:#EC3848;
+  font-family: 'Courgette', cursive;
 }
 
 nav ul a {
-  color:purple;
+  color:#EC3848;
+}
+
+h1{
+  font-family: 'Courgette', cursive;
+}
+
+h5{
+  color:#FFFFFF;
+}
+
+body {font: normal 18px/1 sans-serif;
+background-color: #2079b9; color: white;
+}
+
+.collection a.collection-item{
+  color:#EC3848;
+
 }

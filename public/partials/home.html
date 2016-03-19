@@ -1,9 +1,10 @@
 <div class="section no-pad-bot" id="index-banner" ng-controller="mainCtrl">
   <div class="container">
     <br><br>
-    <h1 class="header center orange-text">Your Perfect Vacation is Here</h1>
+    <h1 class="header center white-text">Your Perfect Vacation is Here</h1>
     <div class="row center">
       <h5 class="header col s12 light"> The greatest reward and luxury of travel is to be able to experience everyday things as if for the first time</h5>
+
     </div>
     <br><br>
 
@@ -12,9 +13,9 @@
 
 
 <div class="container" ng-hide="activityShow">
-<div class="collection" ng-repeat="item in categories track by $index">
+<div class="collection" ng-repeat="item in destinations track by $index">
 
-<a href="#!" class="collection-item">{{item.category}}<span class="new badge" ng-click="getQuests(this)">Select</span></a>
+<a href="#!" class="collection-item">{{item.destination}}<span class="new badge" ng-click="getActivities(this)">Select</span></a>
 </div>
 </div>
 
