@@ -1,0 +1,93 @@
+<div ng-controller="adminCtrl">
+<h1>ADMIN</h1>
+      <a ng-show ="allShow" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" ng-click="addNewActiv()">Add</i></a>
+
+  <div class="allActivs" ng-show="allShow">
+
+      <div class="row"  ng-repeat="activ in allActivs track by $index">
+        <div class="col s6 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">{{activ.destination}}</span>
+              <p>Activity: {{activ.activity}}</p>
+              <p>Detail: {{activ.detail}}</p>
+              <p>Note: {{activ.note}}</p>
+            </div>
+            <div class="card-action">
+              <a ng-click="modifyA(this)">Modify</a>
+              <a ng-click="deleteA(this)">Delete</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
+
+    <form class="col s12" ng-show="modShow">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="destination" type="text" class="validate" ng-model="update.destination">
+          <label class ="active" for="Destination">Destination: </label>
+        </div>
+        <div class="input-field col s6">
+          <input id="activity" type="text" class="validate" ng-model="update.activity">
+          <label class ="active" for="activity">Activity: </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class ="validate" id="detail" type="text" ng-model="update.detail">
+          <label class ="active" for="detail">Detail: </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="note" type="text" class="validate" ng-model="update.note">
+          <label class ="active" for="note">Note: </label>
+        </div>
+      </div>
+      <div class="row">
+  <button ng-click ="updateA(this)" class="btn waves-effect waves-light" type="submit" name="update">Update
+  </button>
+  <button ng-click ="quitUpdate()" class="btn waves-effect waves-light" type="submit" name="quit">Exit
+  </button>
+      </div>
+    </form>
+
+<div class="addNewA" ng-show="addShow">
+      <form name ="addNew" class="col s12" >
+      <div class="row">
+        <div class="input-field col s6">
+          <input required id="destination" type="text" class="validate" ng-model="newA.destination">
+          <label class ="active" for="Destination">Destination: </label>
+        </div>
+        <div class="input-field col s6">
+          <input required id="activity" type="text" class="validate" ng-model="newA.activity">
+          <label class ="active" for="activity">Activity: </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input required id="detail" type="text" ng-model="newA.detail">
+          <label class ="active" for="detail">Detail: </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input required id="note" type="text" class="validate" ng-model="newA.note">
+          <label for="note">Note: </label>
+        </div>
+      </div>
+      <div class="row">
+  <button ng-disabled="!(!!newA.destination && !!newA.activity  && !!newA.detail && !!newA.note)" ng-click ="addNewA(newA)" class="btn waves-effect waves-light" type="submit" name="Add">Add
+  </button>
+  <button ng-click ="quitAdd()" class="btn waves-effect waves-light" type="submit" name="quit">Exit
+  </button>
+      </div>
+    </form>
+</div>
+
+
+
+</div
