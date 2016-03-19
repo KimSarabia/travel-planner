@@ -1,5 +1,5 @@
 <div ng-controller="adminCtrl">
-<h1>ADMIN</h1>
+    <h1 class="header center white-text">Manage My Itinerary</h1>
       <a ng-show ="allShow" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons" ng-click="addNewActiv()">Add</i></a>
 
   <div class="allActivs" ng-show="allShow">
@@ -7,7 +7,7 @@
       <div class="row"  ng-repeat="activ in allActivs track by $index">
         <div class="col s6 m6">
           <div class="card white darken-1">
-            <div class="card-content purple-text">
+            <div class="card-content red-text">
               <span class="card-title">{{activ.destination}}</span>
               <p>Activity: {{activ.activity}}</p>
               <p>Detail: {{activ.detail}}</p>
